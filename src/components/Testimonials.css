@@ -1,0 +1,65 @@
+/*
+  Styles for the testimonials section. The card is centered and
+  includes navigation controls that allow the user to move through
+  multiple testimonials. Buttons invert colours on hover.
+*/
+
+.testimonials-section {
+  margin-bottom: 80px;
+}
+
+/* Section title style for headings within the testimonials section */
+.section-title {
+  font-size: 40px;
+  font-weight: 800;
+  margin-bottom: 24px;
+  font-family: 'Outfit', 'Inter', 'Poppins', sans-serif;
+}
+
+.testimonial-card {
+  background-color: var(--card-bg);
+  padding: 40px 30px;
+  border-radius: 16px;
+  max-width: 600px;
+  margin-bottom: 20px;
+}
+
+.quote {
+  font-size: 18px;
+  margin-bottom: 16px;
+  color: var(--text-color);
+  /* Use Inter for testimonial quote text for easy reading */
+  font-family: 'Inter', 'Outfit', 'Poppins', sans-serif;
+}
+
+.name {
+  font-size: 16px;
+  color: var(--primary-color);
+  font-weight: 600;
+  /* Use Outfit for names to emphasise them */
+  font-family: 'Outfit', 'Inter', 'Poppins', sans-serif;
+}
+
+.testimonial-nav {
+  display: flex;
+  gap: 12px;
+}
+
+.testimonial-nav button {
+  background-color: var(--card-bg);
+  border: 1px solid var(--primary-color);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-color);
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.testimonial-nav button:hover {
+  background-color: var(--primary-color);
+  color: var(--bg-color);
+}

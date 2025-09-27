@@ -1,0 +1,142 @@
+/*
+  Styles for the sticky profile card. The card uses a dark
+  background with a light portrait image. Spacing and typography
+  mirror the original design while maintaining accessibility.
+*/
+
+.left-card {
+  position: sticky;
+  top: 125px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  background: #1f1f1f;
+  border-radius: 5px;
+  padding: 40px 60px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.profile-name {
+  font-size: 26px;
+  font-weight: 800;
+  margin: 0;
+  text-align: center;
+  font-family: 'Outfit', 'Inter', 'Poppins', sans-serif;
+}
+
+.profile-name-highlight {
+  color: var(--primary-color);
+}
+
+.photo-wrapper {
+  width: 250px;
+  aspect-ratio: 6 / 7;
+  border-radius: 5px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.photo-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.degree {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.job {
+  font-size: 13px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.55);
+  font-family: 'Inter', 'Outfit', 'Poppins', sans-serif;
+  margin-bottom: -10px;
+}
+
+.degree-label {
+  font-size: 13px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.55);
+  font-family: 'Inter', 'Outfit', 'Poppins', sans-serif;
+  margin: 5;
+}
+
+.degree-detail {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.85);
+  font-family: 'Inter', 'Outfit', 'Poppins', sans-serif;
+  margin: 0;
+}
+
+.socials {
+  display: flex;
+  gap: 14px;
+}
+
+.socials a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 5px;
+  color: rgba(255, 255, 255, 0.75);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.socials a:hover {
+  background: rgba(255, 255, 255, 0.16);
+  color: var(--primary-color);
+}
+
+@media (max-width: 1024px) {
+  .left-card {
+    width: 100%;
+  }
+}
+
+.card-divider {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0));
+  margin: 0;
+}
+
+.hero-marquee {
+  overflow: hidden;
+  width: 110%;
+  margin-bottom: -25px;
+}
+
+.hero-marquee-track {
+  display: inline-flex;
+  gap: 32px;
+  animation: heroMarquee 18s linear infinite;
+}
+
+.hero-marquee-track span {
+  font-size: 13px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.55);
+  white-space: nowrap;
+  font-family: 'Inter', 'Outfit', 'Poppins', sans-serif;
+}
+
+
+@keyframes heroMarquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-25%);
+  }
+}

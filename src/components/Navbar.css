@@ -1,0 +1,65 @@
+/*
+  Styles for the top navigation bar. The bar is centered and
+  semi-transparent. Each nav item displays an icon and a label
+  (labels hide on small screens). Buttons are styled to look like
+  interactive pills.
+*/
+
+.navbar {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  background-color: var(--card-bg);
+  padding: 6px 12px;
+  border-radius: 2px !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  z-index: 999;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: transparent;
+  border: none;
+  color: var(--text-color);
+  padding: 8px 10px;
+  border-radius: 2px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
+  /* Use Inter for nav labels for clarity */
+  font-family: 'Inter', 'Outfit', 'Poppins', sans-serif;
+}
+
+.nav-item:hover,
+.nav-item:focus {
+  background-color: var(--primary-color);
+}
+
+.nav-item.is-active {
+  background-color: var(--primary-color);
+  color: #050505;
+  box-shadow: 0 6px 18px rgba(145, 75, 241, 0.28);
+}
+
+.nav-item.is-active .icon {
+  color: inherit;
+}
+
+.icon {
+  font-size: 16px;
+}
+
+.label {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .label {
+    display: inline;
+  }
+}

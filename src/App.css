@@ -1,0 +1,87 @@
+/*
+  Global stylesheet
+  Defines colour palette, typography and layout helpers. Media
+  queries ensure the layout adapts gracefully across screen sizes.
+*/
+
+/* Import Google fonts used in the original Seera template. When
+   running locally with an internet connection these will load from
+   Google Fonts. If you are offline the browser will fall back to
+   default sans‑serif fonts.  The original design utilises three
+   typefaces — Outfit for big headlines and hero numbers, Inter for
+   body copy and labels, and Poppins for subtle accents.  We import
+   multiple weights so text can match the varying stroke widths
+   across the template. */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;900&family=Poppins:wght@400;500;600;700;900&family=Inter:wght@400;500;600;700;900&display=swap');
+
+:root {
+  --bg-color: #111111;
+  --card-bg: #272829;
+  --primary-color: #914bf1;
+  --text-color: #ffffff;
+  --muted-text: #b1b1b1;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  /* Set Inter as the base typeface for paragraph copy and smaller text,
+     with Outfit and Poppins as fallbacks.  These fallbacks ensure
+     headings and highlighted text render with the appropriate
+     display fonts when explicitly specified in component styles. */
+  font-family: 'Inter', 'Outfit', 'Poppins', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  scroll-behavior: smooth;
+  min-height: 100vh;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* Layout container for the page */
+
+
+.layout {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  width: 100%;
+  padding: 125px;
+  margin: 0 auto;
+  gap: 32px;
+  box-sizing: border-box;
+}
+
+.left-card {
+  flex: 0 0 210px;
+  max-width: 210px;
+}
+
+.main-content {
+  flex: 1;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .layout {
+    flex-direction: column;
+    padding: 40px 24px;
+  }
+  .left-card {
+    position: static;
+    flex: none;
+    width: 100%;
+  }
+}

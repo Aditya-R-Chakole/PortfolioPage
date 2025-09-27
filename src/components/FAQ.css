@@ -1,0 +1,58 @@
+/*
+  Styles for the FAQ section. Each FAQ item has a header that
+  toggles the visibility of the answer. We apply background and
+  border-radius to match the other cards on the page.
+*/
+
+.faq-section {
+  margin-bottom: 80px;
+}
+
+/* Section title style for the FAQ heading */
+.section-title {
+  font-size: 40px;
+  font-weight: 800;
+  margin-bottom: 24px;
+  font-family: 'Outfit', 'Inter', 'Poppins', sans-serif;
+}
+
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.faq-item {
+  background-color: var(--card-bg);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.faq-question {
+  width: 100%;
+  background: none;
+  border: none;
+  color: var(--text-color);
+  padding: 14px 20px;
+  font-size: 16px;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  /* Use Outfit for question headings to emphasise them */
+  font-family: 'Outfit', 'Inter', 'Poppins', sans-serif;
+}
+
+.faq-question:hover {
+  background-color: var(--primary-color);
+}
+
+.faq-answer {
+  padding: 0 20px 16px;
+  font-size: 14px;
+  color: var(--muted-text);
+  /* Use Inter for answers for readability */
+  font-family: 'Inter', 'Outfit', 'Poppins', sans-serif;
+}

@@ -1,0 +1,39 @@
+/*
+  Styles for the companies section. A simple one‑liner to show
+  placeholder clients. Icons help break up the monotony and add
+  visual interest.
+*/
+
+.companies-section {
+  margin-bottom: 60px;
+}
+
+.companies-title {
+  font-size: 14px;
+  color: var(--muted-text);
+  margin-bottom: 20px;
+  /* Use Inter for the subtle companies heading */
+  font-family: 'Inter', 'Outfit', 'Poppins', sans-serif;
+}
+
+.companies-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.company-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  color: var(--text-color);
+  font-size: 16px;
+  /* Use Outfit for company names to stand out */
+  font-family: 'Outfit', 'Inter', 'Poppins', sans-serif;
+}
+
+.company-item svg {
+  font-size: 24px;
+  color: var(--primary-color);
+}
