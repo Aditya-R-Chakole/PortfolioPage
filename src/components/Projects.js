@@ -16,6 +16,7 @@ const experiences = [
   {
     id: 1,
     title: 'Software Engineer @Marketfeed',
+    startDate: 'PRESENT',
     subtitle: [
       {
         text: 'Co-designed and developed a {GPU-accelerated backtesting engine} from scratch with CUDA framework in Python, {cutting backtesting time by 93% and cost by 77%}, accelerating quantitative research workflows.'
@@ -44,6 +45,7 @@ const experiences = [
   {
     id: 2,
     title: 'Software Developer Engineer @Cogoport',
+    startDate: 'AUG 2023',
     subtitle: [
       {
         text: 'Developed invoice-consolidation system for FTL shipments, using RubyOnRails, {reducing 30% of billing time}.'
@@ -58,6 +60,7 @@ const experiences = [
   {
     id: 3,
     title: 'Machine Learning Intern @Inscripta AI',
+    startDate: 'Jun 2021',
     subtitle: [
       {
         text: 'Time Series Analysis: {Analysis of parking station-related data across cities of San Diego and Los Angeles}.'
@@ -74,6 +77,7 @@ const experiences = [
   {
     id: 4,
     title: 'Software Engineer Intern @Analytics Vidhya',
+    startDate: 'Mar 2020',
     subtitle: [
       {
         text: "Implemented bookmark functionality for Analytics Vidhya's job portal using the Django framework."
@@ -90,6 +94,7 @@ const showcaseProjects = [
   {
     id: 'project-4',
     title: 'M.Tech Thesis - Pavement Condition Detection',
+    startDate: 'Nov 2023',
     subtitle: [
       {
         text: 'Automated {pavement surface condition detection} with a computer vision pipeline built around deep learning algorithms.'
@@ -142,9 +147,10 @@ const Projects = () => {
     <>
       <section id="experience" className="projects-section">
         <h2 className="section-title">Experience</h2>
-        <div className="projects-container">
+        <div className="projects-container timeline-list">
           {experiences.map((project) => {
             const [role = '', company] = project.title.split('@');
+            const startDate = project.startDate || '—';
 
             return (
               <div key={project.id} className="project-card">
@@ -160,6 +166,7 @@ const Projects = () => {
                       )}
                     </h3>
                   </div>
+                  <span className="project-start-date">{startDate}</span>
                 </div>
 
                 <div className="project-info">
@@ -188,9 +195,10 @@ const Projects = () => {
 
       <section id="projects" className="projects-section">
         <h2 className="section-title section-title--secondary">Projects</h2>
-        <div className="projects-container projects-container--showcase">
+        <div className="projects-container projects-container--showcase timeline-list">
           {showcaseProjects.map((project) => {
             const [role = '', company] = project.title.split('@');
+            const startDate = project.startDate || '—';
 
             return (
               <div key={project.id} className="project-card">
@@ -206,6 +214,7 @@ const Projects = () => {
                       )}
                     </h3>
                   </div>
+                  <span className="project-start-date">{startDate}</span>
                 </div>
 
                 <div className="project-info">

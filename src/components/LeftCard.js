@@ -28,7 +28,7 @@ const LeftCard = () => {
       <div className="hero-marquee" aria-hidden="true">
         <div className="hero-marquee-track">
           {Array.from({ length: 6 }).map((_, index) => (
-            <span key={index}>Software Engineer • Quant Systems • ML Enthusiast • </span>
+            <span key={index}>Software Engineer • Quant Engineer • ML / AI Enthusiast •</span>
           ))}
         </div>
       </div>

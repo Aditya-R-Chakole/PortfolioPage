@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaEnvelope, FaPhoneAlt } from 'react-icons/fa';
+import { FaEnvelope, FaPhoneAlt, FaDownload } from 'react-icons/fa';
 import './CTA.css';
 
 /**
@@ -30,6 +30,16 @@ const CTA = () => {
         </a>
       </div>
 
+      <div className="cta-actions">
+        <a
+          href="Aditya_Chakole_Resume.pdf"
+          className="cta-secondary"
+          download
+        >
+          <FaDownload />
+          <span>Download resume</span>
+        </a>
+      </div>
     </section>
   );
 };

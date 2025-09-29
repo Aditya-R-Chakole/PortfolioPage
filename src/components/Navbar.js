@@ -8,10 +8,10 @@ import './Navbar.css';
  * mobile screens the labels are hidden to save space.
  */
 const navItems = [
-  { id: 'top', icon: <FaHome />, label: 'Home' },
-  { id: 'experience', icon: <FaBriefcase />, label: 'Experience' },
-  { id: 'projects', icon: <FaRocket />, label: 'Projects' },
-  { id: 'contact', icon: <FaEnvelope />, label: 'Contact' }
+  { id: 'top', icon: <FaHome />, label: '' },
+  { id: 'experience', icon: <FaBriefcase />, label: '' },
+  { id: 'projects', icon: <FaRocket />, label: '' },
+  { id: 'contact', icon: <FaEnvelope />, label: '' }
 ];
 
 const Navbar = () => {

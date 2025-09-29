@@ -23,6 +23,87 @@
   gap: 28px;
 }
 
+.timeline-list {
+  position: relative;
+  padding-left: 52px;
+}
+
+.timeline-list::before {
+  content: '';
+  position: absolute;
+  left: 24px;
+  top: 36px;
+  bottom: 36px;
+  width: 2px;
+  background: linear-gradient(180deg, rgba(145, 75, 241, 0.35), rgba(145, 75, 241, 0.08));
+  pointer-events: none;
+}
+
+.timeline-list .project-card {
+  margin: 0;
+}
+
+.timeline-list .project-card::before {
+  content: '';
+  position: absolute;
+  top: 36px;
+  left: -35px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: var(--bg-color);
+  border: 2px solid var(--primary-color);
+  box-shadow: 0 0 0 4px rgba(145, 75, 241, 0.16);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.timeline-list .project-card:hover::before {
+  box-shadow: 0 0 0 6px rgba(145, 75, 241, 0.22);
+  transform: scale(1.05);
+}
+
+.timeline-list .project-card:last-child::after {
+  content: '';
+  position: absolute;
+  left: -28px;
+  bottom: -36px;
+  width: 16px;
+  height: 36px;
+  background: linear-gradient(180deg, rgba(145, 75, 241, 0.12), rgba(145, 75, 241, 0));
+  filter: blur(6px);
+  pointer-events: none;
+}
+
+@media (max-width: 768px) {
+  .timeline-list {
+    padding-left: 40px;
+  }
+
+  .timeline-list::before {
+    left: 18px;
+  }
+
+  .timeline-list .project-card::before {
+    left: -29px;
+  }
+
+  .timeline-list .project-card:last-child::after {
+    left: -22px;
+    bottom: -28px;
+    height: 28px;
+  }
+
+  .project-card-header {
+    grid-template-columns: 48px 1fr auto;
+    gap: 14px;
+  }
+
+  .project-start-date {
+    font-size: 12px;
+    min-width: 72px;
+  }
+}
+
 .projects-container--showcase {
   gap: 24px;
 }
@@ -71,8 +152,9 @@
 }
 
 .project-card-header {
-  display: flex;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 56px 1fr auto;
+  align-items: start;
   gap: 18px;
 }
 
@@ -103,6 +185,22 @@
   color: var(--muted-text);
   letter-spacing: 0.04em;
   text-transform: uppercase;
+}
+
+.project-start-date {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted-text);
+  min-width: 88px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-end;
+  justify-self: end;
+  line-height: 1.2;
+  margin-top: 4px;
+  align-self: end;
 }
 
 .project-card .image-wrapper {

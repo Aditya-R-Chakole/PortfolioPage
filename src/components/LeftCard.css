@@ -89,17 +89,47 @@
   height: 48px;
   border-radius: 5px;
   color: rgba(255, 255, 255, 0.75);
-  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.10);
 }
 
 .socials a:hover {
-  background: rgba(255, 255, 255, 0.16);
+  /* background: rgba(255, 255, 255, 0.16); */
   color: var(--primary-color);
 }
 
 @media (max-width: 1024px) {
   .left-card {
+    padding: 36px 40px;
+  }
+}
+
+@media (max-width: 900px) {
+  .left-card {
+    position: static;
+    top: auto;
     width: 100%;
+    max-width: 420px;
+    padding: 32px 28px 36px;
+    margin: 0 auto;
+    box-shadow: 0 24px 64px rgba(0, 0, 0, 0.18);
+  }
+
+  .socials {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .left-card {
+    padding: 28px 24px 32px;
+  }
+
+  .photo-wrapper {
+    width: 200px;
+  }
+
+  .hero-marquee {
+    margin-bottom: -14px;
   }
 }
 
