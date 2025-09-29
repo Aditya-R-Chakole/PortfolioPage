@@ -9,6 +9,8 @@ import './CTA.css';
  * your own to make the CTA functional.
  */
 const CTA = () => {
+  const resumeUrl = `${process.env.PUBLIC_URL}/Aditya_Chakole_Resume.pdf`;
+
   return (
     <section id="contact" className="cta-section">
       <h2 className="cta-title">
@@ -32,7 +34,7 @@ const CTA = () => {
 
       <div className="cta-actions">
         <a
-          href="Aditya_Chakole_Resume.pdf"
+          href={resumeUrl}
           className="cta-secondary"
           download
         >
