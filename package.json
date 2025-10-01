@@ -2,7 +2,7 @@
   "name": "adityarc-portfolio",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://aditya-r-chakole.github.io/PortfolioPage/",
+  "homepage": "http://Aditya-R-Chakole.github.io/PortfolioPage/",
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
