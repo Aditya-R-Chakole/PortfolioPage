@@ -9,7 +9,7 @@ import './CTA.css';
  * your own to make the CTA functional.
  */
 const CTA = () => {
-  const resumeUrl = `${process.env.PUBLIC_URL}/Aditya_Chakole_Resume.pdf`;
+  const resumeUrl = `https://drive.google.com/file/d/1G6TLeHDjEMR06_-TsNXCqtbA6qnfVFsn/view?usp=sharing`;
 
   return (
     <section id="contact" className="cta-section">
